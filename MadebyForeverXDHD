@@ -1,0 +1,173 @@
+---loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/NewMainScript.lua", true))()
+--loadstring(game:HttpGet("https://raw.githubusercontent.com/ForeverXDHD/Scripthub/main/Foreverhub", true ))()
+-- Gui to Lua
+-- Version: 3.2
+
+-- Instances:
+
+local ScreenGui = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local Run_Button = Instance.new("TextButton")
+local Jump_Button = Instance.new("TextButton")
+local TextLabel = Instance.new("TextLabel")
+local OffSpeed = Instance.new("TextButton")
+local TextButton = Instance.new("TextButton")
+local Admin = Instance.new("TextButton")
+
+--Properties:
+
+ScreenGui.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+ScreenGui.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = ScreenGui
+Frame.BackgroundColor3 = Color3.fromRGB(205, 230, 255)
+Frame.Position = UDim2.new(0.237940788, 0, 0.0387453884, 0)
+Frame.Size = UDim2.new(0, 280, 0, 360)
+
+Run_Button.Name = "Run_Button"
+Run_Button.Parent = Frame
+Run_Button.BackgroundColor3 = Color3.fromRGB(255, 98, 88)
+Run_Button.BorderColor3 = Color3.fromRGB(69, 42, 0)
+Run_Button.Position = UDim2.new(0.152777776, 0, 0.720218122, 0)
+Run_Button.Size = UDim2.new(0, 200, 0, 50)
+Run_Button.Font = Enum.Font.LuckiestGuy
+Run_Button.Text = "Speed"
+Run_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Run_Button.TextSize = 33.000
+
+Jump_Button.Name = "Jump_Button"
+Jump_Button.Parent = Frame
+Jump_Button.BackgroundColor3 = Color3.fromRGB(87, 121, 255)
+Jump_Button.Position = UDim2.new(0.152777776, 0, 0.341781378, 0)
+Jump_Button.Size = UDim2.new(0, 200, 0, 50)
+Jump_Button.Font = Enum.Font.Unknown
+Jump_Button.Text = "Jump"
+Jump_Button.TextColor3 = Color3.fromRGB(0, 0, 0)
+Jump_Button.TextSize = 35.000
+
+TextLabel.Parent = Frame
+TextLabel.BackgroundColor3 = Color3.fromRGB(60, 236, 255)
+TextLabel.Position = UDim2.new(0.152777776, 0, 0.0532786883, 0)
+TextLabel.Size = UDim2.new(0, 200, 0, 50)
+TextLabel.Font = Enum.Font.SourceSans
+TextLabel.Text = "FOREVERS GUI"
+TextLabel.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextLabel.TextSize = 40.000
+
+OffSpeed.Name = "OffSpeed"
+OffSpeed.Parent = Frame
+OffSpeed.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+OffSpeed.Position = UDim2.new(0.152654871, 0, 0.875931442, 0)
+OffSpeed.Size = UDim2.new(0, 200, 0, 25)
+OffSpeed.Font = Enum.Font.SourceSans
+OffSpeed.Text = "Off"
+OffSpeed.TextColor3 = Color3.fromRGB(0, 0, 0)
+OffSpeed.TextSize = 14.000
+
+TextButton.Parent = Frame
+TextButton.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+TextButton.Position = UDim2.new(0.150943398, 0, 0.509384871, 0)
+TextButton.Size = UDim2.new(0, 200, 0, 26)
+TextButton.Font = Enum.Font.SourceSans
+TextButton.Text = "Off"
+TextButton.TextColor3 = Color3.fromRGB(0, 0, 0)
+TextButton.TextSize = 14.000
+
+Admin.Name = "Admin"
+Admin.Parent = Frame
+Admin.BackgroundColor3 = Color3.fromRGB(255, 138, 83)
+Admin.Position = UDim2.new(0.150000095, 0, 0.195543408, 0)
+Admin.Size = UDim2.new(0, 200, 0, 50)
+Admin.Font = Enum.Font.Highway
+Admin.Text = "Admin"
+Admin.TextColor3 = Color3.fromRGB(0, 0, 0)
+Admin.TextSize = 50.000
+
+-- Scripts:
+
+local function SAJWUIW_fake_script() -- Run_Button.RunScript 
+	local script = Instance.new('LocalScript', Run_Button)
+
+	function on()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 99
+	end
+	
+	script.Parent.Activated:Connect(on)
+	
+end
+coroutine.wrap(SAJWUIW_fake_script)()
+local function JSQEQSC_fake_script() -- Jump_Button.JumpScript 
+	local script = Instance.new('LocalScript', Jump_Button)
+
+	function Active()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 100
+	end
+	
+	script.Parent.Activated:Connect(Active)
+end
+coroutine.wrap(JSQEQSC_fake_script)()
+local function TKMCO_fake_script() -- OffSpeed.Offspeed 
+	local script = Instance.new('LocalScript', OffSpeed)
+
+	function off()
+		game.Players.LocalPlayer.Character.Humanoid.WalkSpeed = 16
+	end
+	script.Parent.Activated:Connect(off)
+end
+coroutine.wrap(TKMCO_fake_script)()
+local function QKYUNT_fake_script() -- TextButton.OffJump 
+	local script = Instance.new('LocalScript', TextButton)
+
+	function DeActivate()
+		game.Players.LocalPlayer.Character.Humanoid.JumpPower = 7.2
+	end
+	script.Parent.Activated:Connect(DeActivate)
+end
+coroutine.wrap(QKYUNT_fake_script)()
+local function BBKXXY_fake_script() -- Frame.Drag_Ui 
+	local script = Instance.new('LocalScript', Frame)
+
+	-- Reference to the GUI element you want to make draggable
+	local gui = script.Parent
+	
+	-- Variables to store the current mouse position and the offset from the GUI's position
+	local dragStart
+	local startPos
+	
+	-- Function to handle mouse button down events
+	local function onMouseDown(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			dragStart = input.Position
+			startPos = gui.Position
+			input.Changed:connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragStart = nil
+				end
+			end)
+		end
+	end
+	
+	-- Function to handle mouse move events
+	local function onMouseMove(input)
+		if dragStart then
+			local delta = input.Position - dragStart
+			gui.Position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X, startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		end
+	end
+	
+	-- Connect the mouse events to the functions
+	game:GetService("UserInputService").InputBegan:connect(onMouseDown)
+	game:GetService("UserInputService").InputChanged:connect(onMouseMove)
+	
+end
+coroutine.wrap(BBKXXY_fake_script)()
+local function GWUITEJ_fake_script() -- Admin.LocalScript 
+	local script = Instance.new('LocalScript', Admin)
+
+	function click()
+		loadstring(game:HttpGet("https://raw.githubusercontent.com/EdgeIY/infiniteyield/master/source", true))()
+	end
+	
+	script.Parent.Activated:Connect(click)
+end
+coroutine.wrap(GWUITEJ_fake_script)()
